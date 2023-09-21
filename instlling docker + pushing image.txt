@@ -1,0 +1,32 @@
+1.sudo apt-get update
+2.sudo apt-get install docker
+if any reason it won't wokr then run docker install command to check avaiable commands
+3.sudo apt install docker.io
+4.sudo snap install docker
+
+5.to check docker installed or not
+docker --version
+or 
+sudo systemctl  status docker
+
+
+--------------------------------
+download image from docker hubspot and running
+sudo docker run hello-world
+
+to check available images on local docker
+
+sudo docker images
+
+to check all available docker 
+docker ps- a
+
+to login docker hub
+
+sudo docker login
+userid
+password
+
+
+5.
+scp -r C:\Users\sayeed\Desktop\aws\Dockers\Hellow_Elsevier ubuntu@13.229.201.103:/var

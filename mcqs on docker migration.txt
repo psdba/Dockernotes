@@ -1,0 +1,79 @@
+What is a key advantage of using Docker for remote migration of a project from local /dev to a production server?
+a) Improved network performance
+b) Direct access to host resources
+c) Consistent environment across deployments
+d) Elimination of virtualization overhead
+
+Answer: c) Consistent environment across deployments
+
+Which command is typically used to establish a secure SSH connection to a remote server for deploying Docker containers?
+a) ssh-copy-id
+b) scp
+c) telnet
+d) ssh
+
+Answer: d) ssh
+
+In the context of Docker, what does a "Docker image" represent?
+a) A snapshot of a running container
+b) A script for orchestrating containers
+c) A template for creating containers
+d) A remote server used for container management
+
+Answer: c) A template for creating containers
+
+What is the purpose of a Docker Compose file in the migration process?
+a) To specify container runtime settings
+b) To define the project's build process
+c) To describe the container orchestration strategy
+d) To configure multiple containers as a service
+
+Answer: d) To configure multiple containers as a service
+
+Which Docker command is used to copy files between a local machine and a remote container?
+a) docker move
+b) docker copy
+c) docker send
+d) docker transport
+
+Answer: b) docker copy
+
+What is the role of a Docker registry in remote migration?
+a) Managing container network settings
+b) Storing and distributing Docker images
+c) Tracking container logs in real-time
+d) Controlling container access permissions
+
+Answer: b) Storing and distributing Docker images
+
+How can environment-specific configuration (such as API keys) be managed effectively during remote migration using Docker?
+a) Embedding the configuration within the Docker image
+b) Storing the configuration in a separate text file
+c) Using Docker secrets for sensitive information
+d) Printing the configuration during container startup
+
+Answer: c) Using Docker secrets for sensitive information
+
+Which command is used to stop and remove a remote Docker container after it has been migrated?
+a) docker clear
+b) docker remove
+c) docker stop
+d) docker delete
+
+Answer: b) docker remove
+
+What is the primary benefit of using a container orchestration tool like Kubernetes during remote migration?
+a) Reducing the need for Docker images
+b) Simplifying the Dockerfile creation process
+c) Automating container deployment and scaling
+d) Ensuring offline access to containers
+
+Answer: c) Automating container deployment and scaling
+
+How can data persistence be ensured during remote migration when dealing with databases in Docker containers?
+a) Regularly exporting the database to external backups
+b) Reloading the database schema during container startup
+c) Utilizing Docker volumes or remote storage for data
+d) Storing database data within the Docker image
+
+Answer: c) Utilizing Docker volumes or remote storage for data

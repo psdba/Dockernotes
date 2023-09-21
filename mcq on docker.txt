@@ -1,0 +1,99 @@
+Question 1:
+What is Docker?
+
+A) A virtual machine management tool.
+B) A containerization platform.
+C) A cloud computing service.
+D) A version control system.
+
+Answer: B) A containerization platform.
+
+Question 2:
+What is a Docker image?
+
+A) A running container instance.
+B) A virtual machine snapshot.
+C) A lightweight, portable, executable package that includes application code and dependencies.
+D) A software library for managing network connections.
+
+Answer: C) A lightweight, portable, executable package that includes application code and dependencies.
+
+Question 3:
+Which command is used to build a Docker image from a Dockerfile?
+
+A) docker start
+B) docker create
+C) docker build
+D) docker run
+
+Answer: C) docker build
+
+Question 4:
+What is the purpose of a Docker container?
+
+A) To store large amounts of data.
+B) To manage virtual machines.
+C) To run applications in isolated environments.
+D) To provide a graphical user interface.
+
+Answer: C) To run applications in isolated environments.
+
+Question 5:
+Which command is used to start a new Docker container from an image?
+
+A) docker launch
+B) docker create
+C) docker start
+D) docker run
+
+Answer: D) docker run
+
+Question 6:
+What is a Docker registry?
+
+A) A containerized database.
+B) A version control system.
+C) A platform for managing containers.
+D) A repository for storing and distributing Docker images.
+
+Answer: D) A repository for storing and distributing Docker images.
+
+Question 7:
+What does the -p flag do in the docker run command?
+
+A) Pauses the container.
+B) Publishes a container's port to the host.
+C) Pulls an image from a registry.
+D) Provides a terminal inside the container.
+
+Answer: B) Publishes a container's port to the host.
+
+Question 8:
+What is the primary advantage of Docker containers over traditional virtual machines?
+
+A) Greater isolation from the host system.
+B) Smaller resource footprint and faster startup times.
+C) Support for running multiple operating systems simultaneously.
+D) Ability to allocate dedicated hardware resources.
+
+Answer: B) Smaller resource footprint and faster startup times.
+
+Question 9:
+What is the purpose of Docker Compose?
+
+A) To build Docker images.
+B) To manage and orchestrate multi-container applications.
+C) To create virtual networks.
+D) To provide security for containers.
+
+Answer: B) To manage and orchestrate multi-container applications.
+
+Question 10:
+Which Docker component is responsible for managing containers across a cluster of machines?
+
+A) Docker Engine
+B) Docker Compose
+C) Docker Registry
+D) Docker Swarm
+
+Answer: D) Docker Swarm
