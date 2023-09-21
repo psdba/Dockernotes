@@ -1,0 +1,93 @@
+create folder
+mkdir sayeed_work
+then 
+cd sayeed_work
+1.create html file
+
+sudo vi index.html
+================================
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello Mobiley</title>
+</head>
+<body>
+    <h1>Hello Mobiley</h1>
+</body>
+</html>
+
+=======================
+
+2.create docker file
+sudo vi Dockerfile
+========================================================================
+# Use a lightweight web server as the base image
+FROM nginx:alpine
+
+# Copy the HTML file to the web server's document root
+COPY index.html /usr/share/nginx/html
+
+# Expose port 80 for web traffic
+EXPOSE 80
+
+# Start the nginx web server
+CMD ["nginx", "-g", "daemon off;"]
+============================================
+3.run the build process
+sudo docker build -t hello-mobiley:1.0 .
+
+4. run the file directly
+
+sudo docker run -d -p 8080:80 hello-mobiley:1.0
+
+
+or push to the registry then download and run
+http://54.196.104.52:8080
+=================================================================
+
+
+
+How to push the image to docker hub:
+----------------------------------------
+devopsmohammed
+
+1.syntax:
+docker tag <local-image> <your-username>/<repository-name>:<version>
+
+for example:
+
+sudo docker tag hello-mobiley:1.0 devopsmohammed/mobiley:1.0
+
+2.
+syntax :
+docker push <your-username>/<repository-name>:<version>
+for example:
+sudo docker push devopsmohammed/mobiley:1.0
+
+===============================================================
+some important concepts
+
+Base Image:
+
+A base image in a Dockerfile is the starting point for creating a Docker container. It is an image that provides the foundation for your container and includes the operating system and some pre-installed software. You build your application or add your custom configurations on top of this base image.
+In a Dockerfile, you typically specify the base image using the FROM instruction. For example: FROM nginx:alpine specifies that the base image is the official Nginx image based on the Alpine Linux distribution.
+
+
+"nginx": This is the primary command that the container will execute. In this case, it's the nginx command, which starts the Nginx web server. When you start a container based on this image, it will automatically run the Nginx server as its main process.
+
+"-g": This is an option or flag that is passed to the nginx command. In Nginx, the -g flag is used to specify global configuration directives. In this context, it's followed by the daemon off; directive.
+
+"daemon off;": This is a specific configuration directive for Nginx. When used with the -g flag, it instructs Nginx not to run as a background daemon but to run in the foreground. In other words, Nginx will not detach from the terminal and will keep running in the container's foreground, which is useful for containerized applications because it helps ensure that the container remains running as long as the primary process (Nginx in this case) is active. If this option were omitted or set to "daemon on;", Nginx would fork itself into the background and might not keep the container running.
+
+So, when you start a container based on an image with this CMD instruction, it will execute the nginx command with the specified global configuration (daemon off;), effectively starting the Nginx web server in the foreground within the container. This allows you to have better control and monitoring of the container's behavior.
+
+
+n Docker, a "digest" is a unique identifier for a Docker image. It's a hash value (SHA-256) that is generated based on the content of the image layers and metadata. The digest serves as a fingerprint for a specific version of an image, ensuring that the image's content hasn't been altered.
+
+When you push an image to a Docker registry, such as Docker Hub, the registry generates a digest for that image and associates it with the image's tag. This digest allows for several important functionalities and benefits:
+
+Immutable Identifiers: The digest uniquely identifies a specific version of an image. Unlike tags, which can be moved or reassigned to different image versions, the digest remains constant for the image it's associated with. This immutability is essential for tracking and verifying the integrity of images.
+
+Secure Pulls: When you pull an image using its digest instead of a tag, you ensure that you're getting the exact image version you expect. This can enhance security and reduce the risk of using outdated or tampered images.
+
+Image Verification: You can verify the integrity of an image by comparing its digest to the expected value. If the digest matches, it confirms that the image hasn't been modified since it was pushed to the registry.
